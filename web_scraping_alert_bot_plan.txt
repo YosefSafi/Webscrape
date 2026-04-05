@@ -1,0 +1,126 @@
+WEB SCRAPING + ALERT BOT — DETAILED PLAN
+
+GOAL:
+Build a system that:
+- Monitors websites
+- Detects meaningful changes
+- Sends alerts (Discord, email, Telegram)
+- Runs automatically
+
+--------------------------------------------------
+
+1. SYSTEM ARCHITECTURE
+
+/bot
+  /scrapers
+  /core
+  /alerts
+  /storage
+  /utils
+  config.py
+  main.py
+
+CORE COMPONENTS:
+
+1. Scraper Engine
+- requests
+- BeautifulSoup
+- Selenium (for JS-heavy sites)
+
+2. Change Detection System
+- Compare old vs new data
+- Decide if change is important
+
+3. Storage Layer
+- JSON (basic)
+- SQLite (recommended)
+- PostgreSQL (advanced)
+
+4. Alert System
+- Discord webhook
+- Email (SMTP)
+- Telegram bot
+
+5. Scheduler
+- Runs bot every X minutes
+
+--------------------------------------------------
+
+2. DEVELOPMENT PHASES
+
+PHASE 1 — BASIC SCRAPER
+- Scrape one website
+- Extract data (price, jobs, headlines)
+
+PHASE 2 — DATA STORAGE
+- Save results
+- JSON or SQLite
+
+PHASE 3 — CHANGE DETECTION
+- Compare new vs old
+- Trigger alert if different
+
+PHASE 4 — ALERT SYSTEM
+- Send notifications
+- Discord / Email / Telegram
+
+PHASE 5 — MULTI-SITE SUPPORT
+- Track multiple URLs
+- Use config file
+
+PHASE 6 — SCHEDULER
+- Loop or schedule library
+
+PHASE 7 — REAL-WORLD HANDLING
+- Headers (User-Agent)
+- Rate limiting
+- Proxy rotation
+- Handle JS sites with Selenium
+
+PHASE 8 — SMART DETECTION
+- Threshold-based alerts
+- Keyword tracking
+- New item detection
+
+PHASE 9 — CLI INTERFACE
+- Add/remove/list tracked sites
+- Run bot manually
+
+PHASE 10 — DEPLOYMENT
+- Local machine or cloud
+- AWS / GCP
+- Docker + cron jobs
+
+--------------------------------------------------
+
+BONUS FEATURES
+
+- Web dashboard (Flask/FastAPI)
+- AI summarization of changes
+- Screenshot comparison
+- Multi-user support
+
+--------------------------------------------------
+
+SKILLS GAINED
+
+- Web scraping
+- Backend architecture
+- APIs and automation
+- Debugging real-world systems
+
+--------------------------------------------------
+
+RECOMMENDED BUILD ORDER
+
+1. Scrape one site
+2. Store data
+3. Detect changes
+4. Send alerts
+5. Add multiple sites
+6. Add scheduler
+7. Handle edge cases
+
+--------------------------------------------------
+
+END OF PLAN
