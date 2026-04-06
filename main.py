@@ -50,8 +50,23 @@ def run_bot():
 
     logger.info("Bot execution cycle completed.")
 
+def validate_config():
+    missing = []
+    if not config.DISCORD_WEBHOOK_URL: missing.append("DISCORD_WEBHOOK_URL")
+    if not config.TELEGRAM_TOKEN: missing.append("TELEGRAM_TOKEN")
+    if not config.TELEGRAM_CHAT_ID: missing.append("TELEGRAM_CHAT_ID")
+    if not config.SENDER_EMAIL: missing.append("SENDER_EMAIL")
+    if not config.SENDER_PASSWORD: missing.append("SENDER_PASSWORD")
+    if not config.RECEIVER_EMAIL: missing.append("RECEIVER_EMAIL")
+    
+    if missing:
+        logger.warning(f"Missing configuration for: {', '.join(missing)}. Some alerts may not work.")
+        return False
+    return True
+
 if __name__ == "__main__":
     logger.info("Starting bot...")
+    validate_config()
     # Run once at start
     run_bot()
     
