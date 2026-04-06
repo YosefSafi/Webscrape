@@ -14,13 +14,13 @@ This project is a web scraping bot that monitors websites, detects changes, and 
 
 ## Roadmap
 
-- [ ] Phase 1: Basic Scraper
-- [ ] Phase 2: Data Storage
-- [ ] Phase 3: Change Detection
-- [ ] Phase 4: Alert System (Discord, Email, Telegram)
-- [ ] Phase 5: Multi-site Support
-- [ ] Phase 6: Scheduler
-- [ ] Phase 7: Real-world Handling (Headers, Proxies)
-- [ ] Phase 8: Smart Detection
+- [x] Phase 1: Basic Scraper
+- [x] Phase 2: Data Storage
+- [x] Phase 3: Change Detection
+- [x] Phase 4: Alert System (Discord, Email, Telegram)
+- [x] Phase 5: Multi-site Support
+- [x] Phase 6: Scheduler
+- [x] Phase 7: Real-world Handling (Headers, Proxies)
+- [x] Phase 8: Smart Detection
 - [ ] Phase 9: CLI Interface
 - [ ] Phase 10: Deployment
